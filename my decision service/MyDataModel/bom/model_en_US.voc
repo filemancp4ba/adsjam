@@ -1,0 +1,24 @@
+
+# cp4admin.my_ads.my_decision_service.mydatamodel.Temperature
+cp4admin.my_ads.my_decision_service.mydatamodel.Temperature#concept.label = temperature
+cp4admin.my_ads.my_decision_service.mydatamodel.Temperature.cold#instance.label = cold
+cp4admin.my_ads.my_decision_service.mydatamodel.Temperature.hot#instance.label = hot
+cp4admin.my_ads.my_decision_service.mydatamodel.Temperature.warm#instance.label = warm
+
+# cp4admin.my_ads.my_decision_service.mydatamodel.Weather
+cp4admin.my_ads.my_decision_service.mydatamodel.Weather#concept.label = weather
+cp4admin.my_ads.my_decision_service.mydatamodel.Weather.Weather(java.lang.Long,boolean,cp4admin.my_ads.my_decision_service.mydatamodel.Temperature)#phrase.navigation = a new {weather} where {0, rain forecast} {1, storm alert} {2, temperature}
+cp4admin.my_ads.my_decision_service.mydatamodel.Weather.rainForecast#phrase.action = set the rain forecast of {this} to {rain forecast}
+cp4admin.my_ads.my_decision_service.mydatamodel.Weather.rainForecast#phrase.addition_setter = add {rain forecast} to the rain forecast of {this}
+cp4admin.my_ads.my_decision_service.mydatamodel.Weather.rainForecast#phrase.navigation = {rain forecast} of {this}
+cp4admin.my_ads.my_decision_service.mydatamodel.Weather.rainForecast#phrase.subtraction_setter = subtract {rain forecast} from the rain forecast of {this}
+cp4admin.my_ads.my_decision_service.mydatamodel.Weather.stormAlert#phrase.action[0] = {this} gets storm alert only if {storm alert}
+cp4admin.my_ads.my_decision_service.mydatamodel.Weather.stormAlert#phrase.action[1] = make it {storm alert} that {this} is storm alert
+cp4admin.my_ads.my_decision_service.mydatamodel.Weather.stormAlert#phrase.action[1].deprecated = true
+cp4admin.my_ads.my_decision_service.mydatamodel.Weather.stormAlert#phrase.navigation = {this} is storm alert
+cp4admin.my_ads.my_decision_service.mydatamodel.Weather.stormAlert#phrase.negative_predicate = {this} is not storm alert
+cp4admin.my_ads.my_decision_service.mydatamodel.Weather.stormAlert#phrase.negative_predicate_setter = {this} does not get storm alert
+cp4admin.my_ads.my_decision_service.mydatamodel.Weather.stormAlert#phrase.positive_predicate_setter = {this} gets storm alert
+cp4admin.my_ads.my_decision_service.mydatamodel.Weather.temperature#phrase.action = set the temperature of {this} to {temperature}
+cp4admin.my_ads.my_decision_service.mydatamodel.Weather.temperature#phrase.clearer = clear the temperature of {this}
+cp4admin.my_ads.my_decision_service.mydatamodel.Weather.temperature#phrase.navigation = {temperature} of {this}
